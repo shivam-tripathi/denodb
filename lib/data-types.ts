@@ -1,7 +1,7 @@
 import type { ModelSchema } from "./model.ts";
 import { Bson } from "../deps.ts";
 
-type ObjectId = Bson.ObjectId;
+export type ObjectId = Bson.ObjectId;
 
 /** Field Types. */
 export type FieldTypeString =
@@ -20,7 +20,8 @@ export type FieldTypeString =
   | "time"
   | "timestamp"
   | "json"
-  | "jsonb";
+  | "jsonb"
+  | "objectId";
 
 export type FieldTypes =
   | "BIG_INTEGER"
@@ -38,7 +39,8 @@ export type FieldTypes =
   | "TIME"
   | "TIMESTAMP"
   | "JSON"
-  | "JSONB";
+  | "JSONB"
+  | "OBJECT_ID";
 
 export type Fields =
   & {
@@ -117,6 +119,8 @@ export const DATA_TYPES: Fields = {
 
   JSON: "json",
   JSONB: "jsonb",
+
+  OBJECT_ID: "objectId",
 
   decimal(precision: number, scale?: number) {
     return {
