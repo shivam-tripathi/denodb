@@ -1,4 +1,4 @@
-export { DATA_TYPES, DataTypes } from "./lib/data-types.ts";
+export { DATA_TYPES, DataTypes, ObjectId } from "./lib/data-types.ts";
 export { Database } from "./lib/database.ts";
 export type { DatabaseOptions, SyncOptions } from "./lib/database.ts";
 export { Model } from "./lib/model.ts";
